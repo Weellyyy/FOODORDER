@@ -53,8 +53,39 @@ $cart_totals = calculate_totals();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Style tambahan khusus untuk halaman ini */
+        .main-content-page {
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 15px;
+        }
+        .order-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .order-table th, .order-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+        .order-table th {
+            background-color: #f9f9f9;
+        }
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        /* Anda bisa menambahkan class status lain seperti .status-completed, .status-cancelled, dll. */
+    </style>
+
 </head>
 <body>
 
@@ -76,12 +107,11 @@ $cart_totals = calculate_totals();
 
         <main class="main-content">
             <header>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search food, category, etc.">
-                </div>
                 <div class="user-profile">
-                    <span>Wellyyy</span>
-                    </div>
+                    <span><?= htmlspecialchars($_SESSION['user_name'] ?? 'Guest') ?></span>
+                </div>
+
+                
             </header>
 
 

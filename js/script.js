@@ -19,10 +19,14 @@ async function addToCart(foodId, buttonElement) {
             body: formData
         });
         if (!response.ok) throw new Error('Network response was not ok.');
-        
+
         const data = await response.json();
-        updateInvoiceUI(data.cart, data.totals);
         showNotification(`${data.cart[foodId].name} ditambahkan ke keranjang!`);
+
+        // ✅ Alihkan ke payment_details.php
+        setTimeout(() => {
+            window.location.href = 'payment_details.php';
+        }, 1000);
     } catch (error) {
         console.error('Fetch error:', error);
         showNotification('Gagal menambahkan item.', 'error');
@@ -31,6 +35,7 @@ async function addToCart(foodId, buttonElement) {
         buttonElement.textContent = 'Order Now';
     }
 }
+
 
 function updateInvoiceUI(cart, totals) {
     const invoiceItemsContainer = document.getElementById('invoice-items');
