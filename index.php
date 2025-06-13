@@ -16,7 +16,8 @@ $popular_foods_query = "SELECT * FROM foods WHERE is_popular = TRUE LIMIT 3";
 $popular_foods_result = mysqli_query($conn, $popular_foods_query);
 
 // 3. Mengambil semua data makanan (bisa juga ditambahkan pagination nanti)
-$all_foods_query = "SELECT * FROM foods WHERE is_popular = FALSE";
+$all_foods_query = "SELECT * FROM foods";
+
 $all_foods_result = mysqli_query($conn, $all_foods_query);
 
 
