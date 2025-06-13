@@ -62,13 +62,11 @@ $cart_totals = calculate_totals();
             <h1 class="logo">foodislice</h1>
             <nav>
                 <ul>
-                    <li class="active"><a href="index.php"><i class="fas fa-th-large"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="fas fa-utensils"></i> Food Order</a></li>
-                    <li><a href="#"><i class="fas fa-comment-dots"></i> Feedback</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> Message</a></li>
-                    <li><a href="order_history.php"><i class="fas fa-history"></i> Order History</a></li>
-                    <li><a href="#"><i class="fas fa-credit-card"></i> Payment Details</a></li>
-                    <li><a href="#"><i class="fas fa-cog"></i> Customization</a></li>
+                    <li class="<?= $current_page == 'index.php' ? 'active' : '' ?>"><a href="index.php">Dashboard</a></li>
+                    <li class="<?= $current_page == 'food_order.php' ? 'active' : '' ?>"><a href="food_order.php">Food Order</a></li>
+                    <li class="<?= $current_page == 'message.php' ? 'active' : '' ?>"><a href="message.php">Message</a></li>
+                    <li class="<?= $current_page == 'order_history.php' ? 'active' : '' ?>"><a href="order_history.php">Order History</a></li>
+                    <li class="<?= $current_page == 'payment_details.php' ? 'active' : '' ?>"><a href="payment_details.php">Payment Details</a></li>
                 </ul>
             </nav>
             <div class="sidebar-promo">
