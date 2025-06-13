@@ -76,7 +76,7 @@ $totals = calculate_totals();
 
         <h3>QRIS (Scan untuk bayar)</h3>
         <div class="qris-section">
-          <img src="images/qris.g" alt="QRIS Payment">
+          <img src="images/qris.jpg" alt="QRIS Payment">
         </div>
 
         <hr>
