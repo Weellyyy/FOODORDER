@@ -59,7 +59,7 @@ $cart_totals = calculate_totals();
 
     <div class="container">
         <aside class="sidebar">
-            <h1 class="logo">foodislice</h1>
+            <h1 class="logo">Welly Restaurant</h1>
             <nav>
                 <ul>
                     <li class="<?= $current_page == 'index.php' ? 'active' : '' ?>"><a href="index.php">Dashboard</a></li>
@@ -79,20 +79,11 @@ $cart_totals = calculate_totals();
                     <input type="text" placeholder="Search food, category, etc.">
                 </div>
                 <div class="user-profile">
-                    <span>David Brown</span>
+                    <span>Wellyyy</span>
                     </div>
             </header>
 
-            <section class="categories">
-                <h2>Explore Categories</h2>
-                <div class="category-list">
-                    <?php while ($category = mysqli_fetch_assoc($categories_result)) : ?>
-                        <div class="category-item">
-                            <span><?= htmlspecialchars($category['name']) ?></span>
-                        </div>
-                    <?php endwhile; ?>
-                </div>
-            </section>
+
 
             <section class="food-list">
                 <div class="list-header">
@@ -107,7 +98,7 @@ $cart_totals = calculate_totals();
                         <div class="card-actions">
                             <button class="wishlist-btn">Wishlist</button>
                             <button class="order-btn" data-id="<?= $food['id'] ?>">Order Now</button>
-                        </div>
+                        </div>  
                     </div>
                     <?php endwhile; ?>
                 </div>
