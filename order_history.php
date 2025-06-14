@@ -52,7 +52,6 @@ $result = mysqli_query($conn, $query);
                 <ul>
                     <li><a href="index.php"><i class="fas fa-th-large"></i> Dashboard</a></li>
                     <li><a href="food_order.php"><i class="fas fa-utensils"></i> Food Order</a></li>
-                    <li><a href="#"><i class="fas fa-comment-dots"></i> Feedback</a></li>
                     <li><a href="#"><i class="fas fa-envelope"></i> Message</a></li>
                     <li class="active"><a href="order_history.php"><i class="fas fa-history"></i> Order History</a></li>
                     <li><a href="#"><i class="fas fa-credit-card"></i> Payment Details</a></li>
